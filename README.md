@@ -30,6 +30,5 @@ Optional (default is fmri-viz.pdf)
 
 =================
 Development Team:
-David Moench (University of Texas at Austin)
-Muhibur Rasheed (University of Texas at Austin)
-Oluwasanmi Koyejo (Stanford University)
+
+David Moench (University of Texas at Austin), Muhibur Rasheed (University of Texas at Austin), Oluwasanmi Koyejo (Stanford University)
