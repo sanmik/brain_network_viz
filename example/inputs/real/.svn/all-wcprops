@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/cvc/!svn/ver/7743/trunk/fmri-viz/inputs/real
+END
+edgedata.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/cvc/!svn/ver/7743/trunk/fmri-viz/inputs/real/edgedata.csv
+END
+nodedata.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/cvc/!svn/ver/7743/trunk/fmri-viz/inputs/real/nodedata.csv
+END

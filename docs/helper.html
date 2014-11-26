@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module helper</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>helper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/david/Dropbox/UT/cvc/fmri-viz/helper.py">/Users/david/Dropbox/UT/cvc/fmri-viz/helper.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;set&nbsp;of&nbsp;helper&nbsp;functions&nbsp;that&nbsp;have&nbsp;no&nbsp;other&nbsp;home.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-calcColor"><strong>calcColor</strong></a>(col1, col2, u, min_u, max_u)</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;col1:&nbsp;String&nbsp;of&nbsp;first&nbsp;color<br>
+&nbsp;&nbsp;col2:&nbsp;String&nbsp;of&nbsp;first&nbsp;color<br>
+&nbsp;&nbsp;u:&nbsp;Interpolation&nbsp;parameter&nbsp;in&nbsp;range&nbsp;[min_u,&nbsp;max_u]<br>
+&nbsp;&nbsp;min_u<br>
+&nbsp;&nbsp;max_u<br>
+Return:<br>
+&nbsp;&nbsp;Hex&nbsp;string&nbsp;interpolated&nbsp;color</tt></dd></dl>
+ <dl><dt><a name="-cartesian2Polar"><strong>cartesian2Polar</strong></a>(x, y)</dt><dd><tt>Return&nbsp;the&nbsp;polar&nbsp;coordinates&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;given&nbsp;cartesian&nbsp;coords.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;x:&nbsp;Cartesian&nbsp;x&nbsp;coordinate<br>
+&nbsp;&nbsp;y:&nbsp;Cartesian&nbsp;y&nbsp;coordinate<br>
+Return:<br>
+&nbsp;&nbsp;Polar&nbsp;coordinate&nbsp;tuple&nbsp;(r,&nbsp;theta)&nbsp;with&nbsp;theta&nbsp;in&nbsp;degrees&nbsp;[0,359]</tt></dd></dl>
+ <dl><dt><a name="-centerOfMass"><strong>centerOfMass</strong></a>(positions, weights)</dt><dd><tt>Calculate&nbsp;the&nbsp;center&nbsp;of&nbsp;mass&nbsp;of&nbsp;a&nbsp;set&nbsp;of&nbsp;weighted&nbsp;positions.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;positions:&nbsp;A&nbsp;list&nbsp;of&nbsp;(x,y,z)&nbsp;position&nbsp;tuples<br>
+&nbsp;&nbsp;weights:&nbsp;A&nbsp;list&nbsp;of&nbsp;position&nbsp;weights&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;A&nbsp;tuple&nbsp;of&nbsp;floats&nbsp;representing&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;center&nbsp;of&nbsp;mass.</tt></dd></dl>
+ <dl><dt><a name="-cos"><strong>cos</strong></a>(...)</dt><dd><tt><a href="#-cos">cos</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;cosine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-degrees"><strong>degrees</strong></a>(...)</dt><dd><tt><a href="#-degrees">degrees</a>(x)<br>
+&nbsp;<br>
+Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;radians&nbsp;to&nbsp;degrees.</tt></dd></dl>
+ <dl><dt><a name="-mapRangeParam"><strong>mapRangeParam</strong></a>(u, min_u, max_u, min_v, max_v)</dt><dd><tt>Linearly&nbsp;map&nbsp;a&nbsp;floating&nbsp;point&nbsp;value&nbsp;u&nbsp;in&nbsp;the&nbsp;range&nbsp;[min_u,&nbsp;max_u]&nbsp;to&nbsp;a&nbsp;value&nbsp;<br>
+v&nbsp;in&nbsp;the&nbsp;range&nbsp;defined&nbsp;by&nbsp;[min_v,&nbsp;max_v].<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;See&nbsp;description.<br>
+Return:<br>
+&nbsp;&nbsp;Floating&nbsp;point&nbsp;value&nbsp;v</tt></dd></dl>
+ <dl><dt><a name="-midTheta"><strong>midTheta</strong></a>(theta1, theta2)</dt></dl>
+ <dl><dt><a name="-minNetDiff"><strong>minNetDiff</strong></a>(a, b)</dt><dd><tt>Returns&nbsp;an&nbsp;offset&nbsp;s&nbsp;that&nbsp;minimizes&nbsp;(zeros)&nbsp;the&nbsp;net&nbsp;difference&nbsp;between&nbsp;the&nbsp;<br>
+equal&nbsp;length&nbsp;lists&nbsp;a&nbsp;and&nbsp;b.&nbsp;Net&nbsp;difference&nbsp;is&nbsp;the&nbsp;sum&nbsp;of&nbsp;all&nbsp;pairwise&nbsp;<br>
+differences:&nbsp;a_elem&nbsp;-&nbsp;(b_elem&nbsp;+&nbsp;s).<br>
+&nbsp;<br>
+Let&nbsp;n&nbsp;=&nbsp;number&nbsp;of&nbsp;elements&nbsp;in&nbsp;a&nbsp;(and&nbsp;in&nbsp;b)<br>
+E&nbsp;=&nbsp;-(n&nbsp;*&nbsp;s)&nbsp;+&nbsp;sum(a)&nbsp;-&nbsp;sum(b)<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;a:&nbsp;A&nbsp;list&nbsp;of&nbsp;values<br>
+&nbsp;&nbsp;b:&nbsp;A&nbsp;list&nbsp;of&nbsp;values<br>
+Return:<br>
+&nbsp;&nbsp;A&nbsp;floating&nbsp;point&nbsp;offset</tt></dd></dl>
+ <dl><dt><a name="-polar2Cartesian"><strong>polar2Cartesian</strong></a>(r, theta)</dt></dl>
+ <dl><dt><a name="-radians"><strong>radians</strong></a>(...)</dt><dd><tt><a href="#-radians">radians</a>(x)<br>
+&nbsp;<br>
+Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;degrees&nbsp;to&nbsp;radians.</tt></dd></dl>
+ <dl><dt><a name="-sin"><strong>sin</strong></a>(...)</dt><dd><tt><a href="#-sin">sin</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;sine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(...)</dt><dd><tt><a href="#-sqrt">sqrt</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-theta2Quadrant"><strong>theta2Quadrant</strong></a>(theta)</dt></dl>
+ <dl><dt><a name="-topRange"><strong>topRange</strong></a>(l, s)</dt><dd><tt>Given&nbsp;a&nbsp;list&nbsp;of&nbsp;values,&nbsp;determines&nbsp;a&nbsp;range&nbsp;in&nbsp;which&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;top&nbsp;<br>
+s%&nbsp;must&nbsp;lie.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;l:&nbsp;A&nbsp;list&nbsp;of&nbsp;values<br>
+&nbsp;&nbsp;s:&nbsp;A&nbsp;percentage<br>
+Return:<br>
+&nbsp;&nbsp;A&nbsp;tuple&nbsp;(lowest&nbsp;value&nbsp;that&nbsp;could&nbsp;be&nbsp;in&nbsp;top&nbsp;s%,&nbsp;max&nbsp;value&nbsp;in&nbsp;l)</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pi</strong> = 3.141592653589793</td></tr></table>
+</body></html>

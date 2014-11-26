@@ -1,0 +1,133 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module graph_renderer</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>graph_renderer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/david/Dropbox/UT/cvc/fmri-viz/graph_renderer.py">/Users/david/Dropbox/UT/cvc/fmri-viz/graph_renderer.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;class&nbsp;to&nbsp;maintain&nbsp;render&nbsp;properties&nbsp;about&nbsp;a&nbsp;Graph&nbsp;instance&nbsp;and&nbsp;provide<br>
+methods&nbsp;for&nbsp;rendering&nbsp;that&nbsp;graph.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="matplotlib.axes.html">matplotlib.axes</a><br>
+<a href="bisect.html">bisect</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.colorbar.html">matplotlib.colorbar</a><br>
+<a href="config.html">config</a><br>
+</td><td width="25%" valign=top><a href="csv.html">csv</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="graph_renderer.html#GraphRenderer">GraphRenderer</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GraphRenderer">class <strong>GraphRenderer</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GraphRenderer-__init__"><strong>__init__</strong></a>(self, graph, lobe_filename<font color="#909090">=None</font>, s<font color="#909090">=100</font>)</dt><dd><tt>Constructor<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;graph:&nbsp;A&nbsp;Graph&nbsp;instance.<br>
+&nbsp;&nbsp;lobe_filename:&nbsp;Filename&nbsp;of&nbsp;lobe&nbsp;file&nbsp;explicitly&nbsp;setting&nbsp;lobe&nbsp;extents.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None&nbsp;if&nbsp;no&nbsp;lobe&nbsp;file&nbsp;specified.<br>
+&nbsp;&nbsp;s:&nbsp;An&nbsp;edge&nbsp;weight&nbsp;threshold.&nbsp;Only&nbsp;edges&nbsp;with&nbsp;weight&nbsp;in&nbsp;the&nbsp;top&nbsp;s%&nbsp;get&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rendered.</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-render"><strong>render</strong></a>(self, out_filename)</dt><dd><tt>Render&nbsp;this&nbsp;instance&nbsp;to&nbsp;a&nbsp;PDF.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;out_filename:&nbsp;A&nbsp;string&nbsp;filename&nbsp;to&nbsp;save&nbsp;this&nbsp;PDF&nbsp;as.</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderEdgeLegend"><strong>renderEdgeLegend</strong></a>(self, x, y, w)</dt><dd><tt>Render&nbsp;legend&nbsp;boxes&nbsp;showing&nbsp;metadata&nbsp;about&nbsp;the&nbsp;properties&nbsp;visualized&nbsp;by&nbsp;<br>
+graph&nbsp;edges.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;x,&nbsp;y:&nbsp;Coordinate&nbsp;of&nbsp;top&nbsp;left&nbsp;coordinate&nbsp;of&nbsp;this&nbsp;legend<br>
+&nbsp;&nbsp;w:&nbsp;Width&nbsp;and&nbsp;height&nbsp;of&nbsp;the&nbsp;legend&nbsp;box<br>
+Return:<br>
+&nbsp;&nbsp;Tuple&nbsp;of&nbsp;final&nbsp;dimensions&nbsp;(w,&nbsp;h).&nbsp;(0,0)&nbsp;if&nbsp;there&nbsp;are&nbsp;no&nbsp;edge&nbsp;properties&nbsp;<br>
+&nbsp;&nbsp;defined.</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderLabelLegend"><strong>renderLabelLegend</strong></a>(self, x, y, w)</dt><dd><tt>Render&nbsp;a&nbsp;legend&nbsp;box&nbsp;describing&nbsp;the&nbsp;order&nbsp;and&nbsp;property&nbsp;association&nbsp;of&nbsp;the<br>
+set&nbsp;of&nbsp;labels&nbsp;accompanying&nbsp;each&nbsp;node.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;x,&nbsp;y:&nbsp;Coordinate&nbsp;of&nbsp;top&nbsp;left&nbsp;coordinate&nbsp;of&nbsp;this&nbsp;legend<br>
+&nbsp;&nbsp;w:&nbsp;Width&nbsp;of&nbsp;the&nbsp;legend&nbsp;box<br>
+Return:<br>
+&nbsp;&nbsp;Tuple&nbsp;of&nbsp;final&nbsp;dimensions&nbsp;(w,&nbsp;h).&nbsp;(0,0)&nbsp;if&nbsp;there&nbsp;are&nbsp;no&nbsp;labels&nbsp;to&nbsp;render.</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderNodeLabels"><strong>renderNodeLabels</strong></a>(self)</dt><dd><tt>Render&nbsp;all&nbsp;Node&nbsp;labels.</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderRectangle"><strong>renderRectangle</strong></a>(self, x, y, w, h)</dt><dd><tt>Render&nbsp;a&nbsp;rectangle&nbsp;on&nbsp;this&nbsp;graph_renderer's&nbsp;axes&nbsp;instance.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;x,&nbsp;y:&nbsp;Bottom&nbsp;left&nbsp;corner&nbsp;coords<br>
+&nbsp;&nbsp;w,&nbsp;h:&nbsp;Width&nbsp;and&nbsp;Height&nbsp;dimensions</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderRingLegend"><strong>renderRingLegend</strong></a>(self, x, y, w, layer_i)</dt><dd><tt>Render&nbsp;legend&nbsp;boxes&nbsp;showing&nbsp;metadata&nbsp;about&nbsp;the&nbsp;properties&nbsp;visualized&nbsp;by&nbsp;a&nbsp;<br>
+given&nbsp;ring&nbsp;(layer).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;x,&nbsp;y:&nbsp;Coordinate&nbsp;of&nbsp;top&nbsp;left&nbsp;coordinate&nbsp;of&nbsp;this&nbsp;legend<br>
+&nbsp;&nbsp;w:&nbsp;Width&nbsp;of&nbsp;the&nbsp;legend&nbsp;box<br>
+&nbsp;&nbsp;layer_i:&nbsp;Layer&nbsp;index&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Tuple&nbsp;of&nbsp;final&nbsp;dimensions&nbsp;(w,&nbsp;h)</tt></dd></dl>
+
+<dl><dt><a name="GraphRenderer-renderRingLegends"><strong>renderRingLegends</strong></a>(self)</dt><dd><tt>Render&nbsp;legend&nbsp;boxes&nbsp;describing&nbsp;the&nbsp;properties&nbsp;visualized&nbsp;by&nbsp;each&nbsp;ring&nbsp;<br>
+(layer).</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cos"><strong>cos</strong></a>(...)</dt><dd><tt><a href="#-cos">cos</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;cosine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+ <dl><dt><a name="-degrees"><strong>degrees</strong></a>(...)</dt><dd><tt><a href="#-degrees">degrees</a>(x)<br>
+&nbsp;<br>
+Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;radians&nbsp;to&nbsp;degrees.</tt></dd></dl>
+ <dl><dt><a name="-floor"><strong>floor</strong></a>(...)</dt><dd><tt><a href="#-floor">floor</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;floor&nbsp;of&nbsp;x&nbsp;as&nbsp;a&nbsp;float.<br>
+This&nbsp;is&nbsp;the&nbsp;largest&nbsp;integral&nbsp;value&nbsp;&lt;=&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-radians"><strong>radians</strong></a>(...)</dt><dd><tt><a href="#-radians">radians</a>(x)<br>
+&nbsp;<br>
+Convert&nbsp;angle&nbsp;x&nbsp;from&nbsp;degrees&nbsp;to&nbsp;radians.</tt></dd></dl>
+ <dl><dt><a name="-sin"><strong>sin</strong></a>(...)</dt><dd><tt><a href="#-sin">sin</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;sine&nbsp;of&nbsp;x&nbsp;(measured&nbsp;in&nbsp;radians).</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pi</strong> = 3.141592653589793</td></tr></table>
+</body></html>

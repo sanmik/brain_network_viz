@@ -1,0 +1,289 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module metadata</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>metadata</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/david/Dropbox/UT/cvc/fmri-viz/metadata.py">/Users/david/Dropbox/UT/cvc/fmri-viz/metadata.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;Library&nbsp;Imports</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="config.html">config</a><br>
+</td><td width="25%" valign=top><a href="csv.html">csv</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="metadata.html#Metadata">Metadata</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="metadata.html#EdgeMetadata">EdgeMetadata</a>
+</font></dt><dt><font face="helvetica, arial"><a href="metadata.html#NodeMetadata">NodeMetadata</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EdgeMetadata">class <strong>EdgeMetadata</strong></a>(<a href="metadata.html#Metadata">Metadata</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Subclass&nbsp;to&nbsp;implement&nbsp;Node&nbsp;specific&nbsp;<a href="#Metadata">Metadata</a>&nbsp;functionality<br>
+&nbsp;<br>
+TODO:&nbsp;Consider&nbsp;constructing&nbsp;a&nbsp;lookup&nbsp;table&nbsp;in&nbsp;the&nbsp;same&nbsp;way&nbsp;<a href="#NodeMetadata">NodeMetadata</a>&nbsp;does.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="metadata.html#EdgeMetadata">EdgeMetadata</a></dd>
+<dd><a href="metadata.html#Metadata">Metadata</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="EdgeMetadata-getPropertyName"><strong>getPropertyName</strong></a>(self, use_as)</dt><dd><tt>Get&nbsp;the&nbsp;Property&nbsp;name&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;USE_AS&nbsp;string.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;use_as:&nbsp;A&nbsp;USE_AS&nbsp;value.&nbsp;EG:&nbsp;C,&nbsp;D,&nbsp;etc.<br>
+Return:<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;name&nbsp;of&nbsp;the&nbsp;associated&nbsp;property</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="metadata.html#Metadata">Metadata</a>:<br>
+<dl><dt><a name="EdgeMetadata-__init__"><strong>__init__</strong></a>(self, in_file, num_rows, prime_key)</dt><dd><tt>Construct&nbsp;a&nbsp;<a href="#Metadata">Metadata</a>&nbsp;<a href="__builtin__.html#object">object</a><br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;in_file:&nbsp;A&nbsp;file&nbsp;handle&nbsp;for&nbsp;an&nbsp;input&nbsp;csv&nbsp;file&nbsp;<br>
+&nbsp;&nbsp;num_rows:&nbsp;The&nbsp;number&nbsp;of&nbsp;rows&nbsp;of&nbsp;the&nbsp;csv&nbsp;file&nbsp;defining&nbsp;metadata<br>
+&nbsp;&nbsp;prime_key:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;of&nbsp;primary&nbsp;keys.&nbsp;EG:&nbsp;Attribute&nbsp;names&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item&nbsp;(Node,&nbsp;Edge)&nbsp;IDs.</tt></dd></dl>
+
+<dl><dt><a name="EdgeMetadata-get"><strong>get</strong></a>(self, prop, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;specific&nbsp;property&nbsp;attribute.<br>
+&nbsp;<br>
+Treats&nbsp;the&nbsp;CSV&nbsp;matrix&nbsp;shown&nbsp;up&nbsp;top&nbsp;as&nbsp;a&nbsp;2D&nbsp;array,&nbsp;using&nbsp;prop&nbsp;to&nbsp;lookup&nbsp;<br>
+the&nbsp;column,&nbsp;and&nbsp;attr&nbsp;to&nbsp;lookup&nbsp;the&nbsp;row.<br>
+&nbsp;<br>
+EG:&nbsp;To&nbsp;get&nbsp;the&nbsp;minimum&nbsp;value&nbsp;of&nbsp;a&nbsp;node's&nbsp;x&nbsp;coordinate.<br>
+&nbsp;&nbsp;m&nbsp;=&nbsp;<a href="#Metadata">Metadata</a>('sample_nodes.csv',&nbsp;3,&nbsp;'Name')<br>
+&nbsp;&nbsp;m.<a href="#EdgeMetadata-get">get</a>('X',&nbsp;'MIN_VAL')<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;metadata&nbsp;property<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;attribute&nbsp;of&nbsp;that&nbsp;given&nbsp;property<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;value&nbsp;of&nbsp;the&nbsp;specified&nbsp;metadata&nbsp;property&nbsp;attribute</tt></dd></dl>
+
+<dl><dt><a name="EdgeMetadata-getAttrIdx"><strong>getAttrIdx</strong></a>(self, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;attribute&nbsp;(Row&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;attribute&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;row&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="EdgeMetadata-getPropIdx"><strong>getPropIdx</strong></a>(self, prop)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;property&nbsp;(Column&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;property&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;column&nbsp;index</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="metadata.html#Metadata">Metadata</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Metadata">class <strong>Metadata</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;maintaining&nbsp;metadata&nbsp;(properties&nbsp;and&nbsp;their&nbsp;attributes)&nbsp;about<br>
+Node&nbsp;and&nbsp;Edge&nbsp;objects.&nbsp;This&nbsp;base&nbsp;class&nbsp;handles&nbsp;parsing&nbsp;and&nbsp;storing&nbsp;the&nbsp;CSV<br>
+data,&nbsp;and&nbsp;providing&nbsp;accessor&nbsp;methods.&nbsp;The&nbsp;<a href="#NodeMetadata">NodeMetadata</a>&nbsp;and&nbsp;<a href="#EdgeMetadata">EdgeMetadata</a>&nbsp;add<br>
+some&nbsp;specific&nbsp;methods.<br>
+&nbsp;<br>
+The&nbsp;top&nbsp;rows&nbsp;of&nbsp;an&nbsp;input&nbsp;CSV&nbsp;file&nbsp;define&nbsp;metadata&nbsp;and&nbsp;should&nbsp;look&nbsp;like&nbsp;the&nbsp;<br>
+following&nbsp;example.&nbsp;<br>
+&nbsp;<br>
++-------------+-----------+-----------+-----------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Primary&nbsp;Key&nbsp;|&nbsp;Property1&nbsp;|&nbsp;Property2&nbsp;|&nbsp;Property3&nbsp;|&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------------------------------------------+&nbsp;&lt;-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Attribute1&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------------------------------------------+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Attribute2&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;<a href="#Metadata">Metadata</a><br>
++-------------------------------------------------+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Attribute3&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------------------------------------------+&nbsp;&lt;-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Item1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------------------------------------------+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Item2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;Data&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------------------------------------------+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+|&nbsp;Item3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
++-------------+-----------+-----------+-----------+&nbsp;&lt;-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Class&nbsp;usage&nbsp;example:<br>
+&nbsp;&nbsp;m&nbsp;=&nbsp;<a href="#NodeMetadata">NodeMetadata</a>('sample_nodes.csv',&nbsp;3,&nbsp;'Id')<br>
+&nbsp;&nbsp;m.<a href="#Metadata-get">get</a>('X',&nbsp;'MIN_VAL')<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Metadata-__init__"><strong>__init__</strong></a>(self, in_file, num_rows, prime_key)</dt><dd><tt>Construct&nbsp;a&nbsp;<a href="#Metadata">Metadata</a>&nbsp;<a href="__builtin__.html#object">object</a><br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;in_file:&nbsp;A&nbsp;file&nbsp;handle&nbsp;for&nbsp;an&nbsp;input&nbsp;csv&nbsp;file&nbsp;<br>
+&nbsp;&nbsp;num_rows:&nbsp;The&nbsp;number&nbsp;of&nbsp;rows&nbsp;of&nbsp;the&nbsp;csv&nbsp;file&nbsp;defining&nbsp;metadata<br>
+&nbsp;&nbsp;prime_key:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;of&nbsp;primary&nbsp;keys.&nbsp;EG:&nbsp;Attribute&nbsp;names&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item&nbsp;(Node,&nbsp;Edge)&nbsp;IDs.</tt></dd></dl>
+
+<dl><dt><a name="Metadata-get"><strong>get</strong></a>(self, prop, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;specific&nbsp;property&nbsp;attribute.<br>
+&nbsp;<br>
+Treats&nbsp;the&nbsp;CSV&nbsp;matrix&nbsp;shown&nbsp;up&nbsp;top&nbsp;as&nbsp;a&nbsp;2D&nbsp;array,&nbsp;using&nbsp;prop&nbsp;to&nbsp;lookup&nbsp;<br>
+the&nbsp;column,&nbsp;and&nbsp;attr&nbsp;to&nbsp;lookup&nbsp;the&nbsp;row.<br>
+&nbsp;<br>
+EG:&nbsp;To&nbsp;get&nbsp;the&nbsp;minimum&nbsp;value&nbsp;of&nbsp;a&nbsp;node's&nbsp;x&nbsp;coordinate.<br>
+&nbsp;&nbsp;m&nbsp;=&nbsp;<a href="#Metadata">Metadata</a>('sample_nodes.csv',&nbsp;3,&nbsp;'Name')<br>
+&nbsp;&nbsp;m.<a href="#Metadata-get">get</a>('X',&nbsp;'MIN_VAL')<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;metadata&nbsp;property<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;attribute&nbsp;of&nbsp;that&nbsp;given&nbsp;property<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;value&nbsp;of&nbsp;the&nbsp;specified&nbsp;metadata&nbsp;property&nbsp;attribute</tt></dd></dl>
+
+<dl><dt><a name="Metadata-getAttrIdx"><strong>getAttrIdx</strong></a>(self, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;attribute&nbsp;(Row&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;attribute&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;row&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="Metadata-getPropIdx"><strong>getPropIdx</strong></a>(self, prop)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;property&nbsp;(Column&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;property&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;column&nbsp;index</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NodeMetadata">class <strong>NodeMetadata</strong></a>(<a href="metadata.html#Metadata">Metadata</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Subclass&nbsp;to&nbsp;implement&nbsp;Node&nbsp;specific&nbsp;<a href="#Metadata">Metadata</a>&nbsp;functionality<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="metadata.html#NodeMetadata">NodeMetadata</a></dd>
+<dd><a href="metadata.html#Metadata">Metadata</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="NodeMetadata-__init__"><strong>__init__</strong></a>(self, in_file, num_rows, prime_key)</dt></dl>
+
+<dl><dt><a name="NodeMetadata-getPropertyIdx"><strong>getPropertyIdx</strong></a>(self, use_as, layer_i)</dt><dd><tt>Get&nbsp;the&nbsp;CSV&nbsp;column&nbsp;of&nbsp;the&nbsp;Property&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;USE_AS&nbsp;value<br>
+for&nbsp;every&nbsp;node's&nbsp;layer&nbsp;i.<br>
+&nbsp;<br>
+Return<br>
+&nbsp;&nbsp;Numeric&nbsp;index&nbsp;of&nbsp;the&nbsp;CSV&nbsp;colum.&nbsp;None&nbsp;that&nbsp;property&nbsp;was&nbsp;not&nbsp;set&nbsp;in&nbsp;the<br>
+&nbsp;&nbsp;input&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-getPropertyMaxVal"><strong>getPropertyMaxVal</strong></a>(self, use_as, layer_i)</dt><dd><tt>Get&nbsp;the&nbsp;maximum&nbsp;value&nbsp;of&nbsp;the&nbsp;Property&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;USE_AS&nbsp;<br>
+value&nbsp;for&nbsp;every&nbsp;node's&nbsp;layer&nbsp;i.<br>
+&nbsp;<br>
+Return<br>
+&nbsp;&nbsp;String&nbsp;maximum&nbsp;value&nbsp;for&nbsp;the&nbsp;property.</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-getPropertyMinVal"><strong>getPropertyMinVal</strong></a>(self, use_as, layer_i)</dt><dd><tt>Get&nbsp;the&nbsp;minimum&nbsp;value&nbsp;of&nbsp;the&nbsp;Property&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;USE_AS&nbsp;<br>
+value&nbsp;for&nbsp;every&nbsp;node's&nbsp;layer&nbsp;i.<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;String&nbsp;minimum&nbsp;value&nbsp;for&nbsp;the&nbsp;property.</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-getPropertyName"><strong>getPropertyName</strong></a>(self, use_as, layer_i)</dt><dd><tt>Get&nbsp;the&nbsp;Property&nbsp;name&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;USE_AS&nbsp;string&nbsp;for&nbsp;the&nbsp;given<br>
+layer.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;use_as:&nbsp;A&nbsp;USE_AS&nbsp;value.&nbsp;EG:&nbsp;C,&nbsp;D,&nbsp;etc.<br>
+&nbsp;&nbsp;layer_i:&nbsp;The&nbsp;layer&nbsp;index<br>
+Return:<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;name&nbsp;of&nbsp;the&nbsp;associated&nbsp;property.&nbsp;None&nbsp;if&nbsp;that&nbsp;property&nbsp;wasn't<br>
+&nbsp;&nbsp;set&nbsp;in&nbsp;the&nbsp;input&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-numLabeledLayers"><strong>numLabeledLayers</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;node&nbsp;layers&nbsp;that&nbsp;a&nbsp;label&nbsp;property&nbsp;explicitly&nbsp;set.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="metadata.html#Metadata">Metadata</a>:<br>
+<dl><dt><a name="NodeMetadata-get"><strong>get</strong></a>(self, prop, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;specific&nbsp;property&nbsp;attribute.<br>
+&nbsp;<br>
+Treats&nbsp;the&nbsp;CSV&nbsp;matrix&nbsp;shown&nbsp;up&nbsp;top&nbsp;as&nbsp;a&nbsp;2D&nbsp;array,&nbsp;using&nbsp;prop&nbsp;to&nbsp;lookup&nbsp;<br>
+the&nbsp;column,&nbsp;and&nbsp;attr&nbsp;to&nbsp;lookup&nbsp;the&nbsp;row.<br>
+&nbsp;<br>
+EG:&nbsp;To&nbsp;get&nbsp;the&nbsp;minimum&nbsp;value&nbsp;of&nbsp;a&nbsp;node's&nbsp;x&nbsp;coordinate.<br>
+&nbsp;&nbsp;m&nbsp;=&nbsp;<a href="#Metadata">Metadata</a>('sample_nodes.csv',&nbsp;3,&nbsp;'Name')<br>
+&nbsp;&nbsp;m.<a href="#NodeMetadata-get">get</a>('X',&nbsp;'MIN_VAL')<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;metadata&nbsp;property<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;attribute&nbsp;of&nbsp;that&nbsp;given&nbsp;property<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;value&nbsp;of&nbsp;the&nbsp;specified&nbsp;metadata&nbsp;property&nbsp;attribute</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-getAttrIdx"><strong>getAttrIdx</strong></a>(self, attr)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;attribute&nbsp;(Row&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;attr:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;attribute&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;row&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="NodeMetadata-getPropIdx"><strong>getPropIdx</strong></a>(self, prop)</dt><dd><tt>Gets&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;metadata&nbsp;property&nbsp;(Column&nbsp;index).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;prop:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;metadata&nbsp;property&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;Integer&nbsp;column&nbsp;index</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="metadata.html#Metadata">Metadata</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

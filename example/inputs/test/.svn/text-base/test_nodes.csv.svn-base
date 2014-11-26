@@ -1,0 +1,10 @@
+Id	Lobe	X	Y	Z	Property1	Property2	Property3	Property4	Property5	Property6	Property7
+MIN_VAL	NA	-10	-10	-10	0	5	-6	NA	-5	-6	NA
+MAX_VAL	NA	10	10	10	1	23	2.8	NA	1	2.8	NA
+USE_AS	G	P	P	P	C	W	D	L	C	D	L
+0	Lobe1	4.2	0.8	-0.36	0.2	10	2	A	-3.8	2	G
+1	Lobe1	7.2	2.9	4.9	0.5	12	-2	B	-1.11	-2	H
+2	Lobe2	-3.1	1.58	-9.2	0.3	19	-3	C	0.7	-3	I
+3	Lobe3	-2.5	-2	1	0.4	5	-5	D	-2	2.7	J
+4	Lobe3	0	-8.6	2	0.1	9	1	E	-3.2	-6	K
+5	Lobe3	-10	-0.2	3	0	11	2.1	F	1	-5.9	L

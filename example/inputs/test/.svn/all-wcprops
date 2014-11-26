@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/cvc/!svn/ver/7802/trunk/fmri-viz/inputs/test
+END
+edgemat_1.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/cvc/!svn/ver/7721/trunk/fmri-viz/inputs/test/edgemat_1.csv
+END
+test_edges.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/cvc/!svn/ver/7802/trunk/fmri-viz/inputs/test/test_edges.csv
+END
+test_nodes.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/cvc/!svn/ver/7802/trunk/fmri-viz/inputs/test/test_nodes.csv
+END
+test_edges2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/cvc/!svn/ver/7802/trunk/fmri-viz/inputs/test/test_edges2.csv
+END
+test_nodes2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/cvc/!svn/ver/7802/trunk/fmri-viz/inputs/test/test_nodes2.csv
+END

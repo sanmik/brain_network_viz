@@ -1,0 +1,7 @@
+Id	Node1	Node2	Property1	Property2	Property3	Property4
+MIN_VAL	NA	NA	5	-6	0	NA
+MAX_VAL	NA	NA	23	2.8	1	NA
+USE_AS	S	E	C	W	D	L
+0	0	1	10	2	0.2	AAA
+1	2	0	12	-2	0.3	TTT
+2	2	1	19	-3	0.9	GTH

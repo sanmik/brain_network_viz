@@ -1,0 +1,19 @@
+Id	Lobe	X	Y	Z	Property1	Property2	Property3	Property4	Property5	Property6	Property7	Property8	Property9	Property10
+MIN_VAL	NA	-10	-10	-10	0	5	-6	NA	-5	0	5	0	NA	NA
+MAX_VAL	NA	10	10	10	1	23	2.8	NA	1	10	10	10	NA	NA
+USE_AS	G	P	P	P	C	W	D	L	C	C	D	D	L	L
+0	Lobe1	4	1	0	0.2	10	2	AAA	-3.8	1	9	4	Layer2 Label	Layer3 Label
+1	Lobe1	3	2	0	0.5	12	-2	BBB	-1.11	2	6	4	Layer2 Label	Layer3 Label
+2	Lobe1	2	3	0	0.3	19	-3	CCC	0.6	3	7	4	Layer2 Label	Layer3 Label
+3	Lobe1	1	4	0	0.4	20	-5	DDD	-3	4	5	4	Layer2 Label	Layer3 Label
+4	Lobe2	-1	3	0	0.6	11	-6	EEE	-1	5	6	4	Layer2 Label	Layer3 Label
+5	Lobe2	-2	2	0	0.1	7	-2	FFF	0	6	9	4	Layer2 Label	Layer3 Label
+6	Lobe2	-2.5	1	0	0.7	5	1	GGG	-4	7	5	4	Layer2 Label	Layer3 Label
+7	Lobe3	-5	-1	0	0.8	5	2	HHH	-5	8	6	4	Layer2 Label	Layer3 Label
+8	Lobe3	-4	-2	0	0.5	10	-1	III	-2	9	7	4	Layer2 Label	Layer3 Label
+9	Lobe3	-3	-3	0	0.7	8	1	JJJ	-3	10	9	4	Layer2 Label	Layer3 Label
+10	Lobe3	-2	-4	0	0.6	21	0	KKK	-3	5	6	4	Layer2 Label	Layer3 Label
+11	Lobe3	-1	-5	0	0.4	16	2	LLL	1	5	7	4	Layer2 Label	Layer3 Label
+12	Lobe4	1	-3	0	0.1	21	1	MMM	-4	2	5	4	Layer2 Label	Layer3 Label
+13	Lobe4	2	-2	0	0.2	21	-3	NNN	-5	1	9	4	Layer2 Label	Layer3 Label
+14	Lobe4	3	-1	0	0.4	5	-2	OOO	-2	3	7	4	Layer2 Label	Layer3 Label
