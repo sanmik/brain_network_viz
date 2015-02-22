@@ -17,22 +17,22 @@ from graph import Graph
 from graph_renderer import GraphRenderer
 from metadata import NodeMetadata, EdgeMetadata
 
-def main():
+def main(nodefile, edgefile, outimage='fmri-viz.pdf', sdef=100):
   # Parse command line args
   parser = argparse.ArgumentParser(prog='fmri-viz',
              description='An fmri graph visualization tool')
-  parser.add_argument('-n', help='Node csv filename', required=True)
-  parser.add_argument('-e', help='Edge csv filename')
+  parser.add_argument('-n', help='Node csv filename', default=nodefile)
+  parser.add_argument('-e', help='Edge csv filename', default=edgefile)
   parser.add_argument('-a', help='Edge adjacency matrix csv filename')
   parser.add_argument('-l', help='Lobe extent file')
-  parser.add_argument('-s', type=int,
+  parser.add_argument('-s', type=int, default=sdef,
     help='Specifies that only edges with a weight in the top s percent of ' +
          'the full range of edge weights will be rendered')
   parser.add_argument('-t', type=int,
     help='Specifies that t% of edges will be rendered. Those edges will be' +
          'those with the highest weights. If there is a tie between ' + 
          'candidates of the same weight, it will be broken non-deterministically')
-  parser.add_argument('-o', help='output filename', default='fmri-viz.pdf')
+  parser.add_argument('-o', help='output filename', default=outimage)
   args = parser.parse_args()
   node_filename   = args.n
   edge_filename   = args.e
